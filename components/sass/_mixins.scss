@@ -1,0 +1,183 @@
+@mixin backImage(
+	$image,
+	$bgPos: center center
+	) {
+	background: url($image);
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} //backimage
+
+@mixin backImageGradient($image){
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(255, 255, 255, 0.3))), url($image); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, transparent, rgba(255,255,255,.3)), url($image); /* Chrome10+,Safari5.1+ */
+    background-image:    -moz-linear-gradient(top, transparent, rgba(255,255,255,.3)), url($image); /* FF3.6+ */
+    background-image:     -ms-linear-gradient(top, transparent, rgba(255,255,255,.3)), url($image); /* IE10+ */
+    background-image:      -o-linear-gradient(top, transparent, rgba(255,255,255,.3)), url($image); /* Opera 11.10+ */
+    background-image:         linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)), url($image); /* W3C */
+
+    background-repeat: repeat-y;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin backGradient(){
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(255, 255, 255, 0.3))); /* Chrome,Safari4+ */
+    background-color: -webkit-linear-gradient(top, transparent, rgba(255,255,255,.3)); /* Chrome10+,Safari5.1+ */
+    background-color:    -moz-linear-gradient(top, transparent, rgba(255,255,255,.3)); /* FF3.6+ */
+    background-color:     -ms-linear-gradient(top, transparent, rgba(255,255,255,.3)); /* IE10+ */
+    background-color:      -o-linear-gradient(top, transparent, rgba(255,255,255,.3)); /* Opera 11.10+ */
+    background-color:         linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); /* W3C */
+
+    background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	} //before, after
+	&:after {
+		clear:both;
+	} //after
+} //clearfix
+
+@mixin center($axis){
+    position:absolute;
+    @if $axis == "y"{
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis == "x"{
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @if $axis == "both"{
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+} //center
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin outterGlow($color){
+	-webkit-filter: drop-shadow(0px 0px 2px rgba($color,0.5));
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+} //imgOutterGlow
+
+@mixin imgOutterGlow($color){
+	-webkit-filter: drop-shadow(0px 0px 7px rgba($color, 0.7));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+} //imgOutterGlow
+
+@mixin innerGlow($color){
+	-webkit-box-shadow: inset 0px 0px 10px 0px rgba($color,0.6);
+	-moz-box-shadow: inset 0px 0px 10px 0px rgba($color,0.6);
+	box-shadow: inset 0px 0px 10px 0px rgba($color,0.6);
+}
+
+@mixin imgOutterStroke($color){
+    -webkit-filter: drop-shadow(0px 0px 1px rgba($color, 1));
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+} //imgOutterGlow
+
+@mixin transparentBlock($color, $alpha, $width, $height){
+	background: rgba($color, $alpha);
+	width: $width;
+	height: $height;
+}
+
+@mixin transRotate($deg){
+	-webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin mainDefaultContainer{
+	@include container('100%');
+	@include center('x');
+	position: absolute;
+	width: 100%;
+}
+
+@mixin blink{
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@mixin transition($sec){
+	-webkit-transition: background $sec ease-in-out;
+	-moz-transition: background $sec ease-in-out;
+	-ms-transition: background $sec ease-in-out;
+	-o-transition: background $sec ease-in-out;
+	transition: background $sec ease-in-out;
+}

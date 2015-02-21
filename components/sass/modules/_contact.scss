@@ -1,0 +1,107 @@
+#contact { 
+	min-height: 100%;
+	@include backImage('../images/contact/nyc-skyline-day-lg.png');
+	
+	.mainContent {
+		@include mainDefaultContainer();
+	} //mainContent
+
+	.mainContentContact {
+		width: 100% !important;
+
+		#formContent {
+			float: right;
+			width: 34%;
+			min-height: 49%;
+			background-color: rgba($black, .50);
+			@include breakpoint(max-width $medium){
+				@include center('both');
+				position: relative;
+				float: none;
+				width: 80%;
+				min-height: 50%;
+			} //breakpoint
+
+			.formHeader {
+				position: relative;
+				width: 100%;
+				min-height: 30%;
+				text-align: left;
+				font-size: 1rem;
+				padding: 1.1em;
+				@include breakpoint(max-width $medium, orientation Portrait) {
+					margin-top: 1em;
+				}
+				span {
+					@include breakpoint(max-width $xsmall){
+						display: none;
+					} //breakpoint
+					padding-right: .3em;	
+				} //span
+			} //footer
+
+			form {
+				position: relative;
+				input, textarea {
+					min-height: 70%;
+					color: darken($white, .5);
+					padding-left: 7px;
+					font-family: $fontFamily-1;
+					font-size: 1.2em;
+					margin: .2em 0 0 5%;
+					width: 90%;
+					border: none;
+					background-color: rgba($white, .40);
+					@include input-placeholder {
+					    color: darken($white, .1);
+					} //input-placeholder
+
+				} //input, textarea
+
+				button {
+					background-color: rgba($blue, .50);
+					font-size: .6rem;
+					color: $white;
+					padding: .5em .8em;
+					margin: 3% 0 1em 36%;
+					border: none;
+					@include border-radius(3px);
+					@include breakpoint(max-width $xsmall){
+						background-color: darken($blue, .5);
+					} //button						
+				} //button
+			} //form
+			img {
+				@include center('both');
+				border: none;
+			} //img	
+		} //formContent
+
+		#googleMap {
+			float: right;
+			width: 34%;
+			min-height: 49%;
+			overflow: hidden;
+			@include breakpoint(max-width $medium){
+				display: none;
+			} //breakpoint
+		} //googleMap
+	} //mainContentContact
+} //conttact
+
+// This section appears when the form is submitted
+.content-message {
+	text-align: center;
+	width: 100%;
+	i {
+		font-size: 5em;
+	} //i
+	h3 {
+		font-size: 3em;
+	} //h3
+	p { 
+		font-size: 1.2em;
+		padding-top: 10px;
+
+	} //p
+} //content-message

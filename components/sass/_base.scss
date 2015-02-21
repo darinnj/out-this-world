@@ -1,0 +1,186 @@
+body {
+	font: $fontFamily-2;
+	background: darken($white, 20);
+	color: $typeLight;
+	font-family: $fontFamily-2;
+	font-size: .8em;
+	margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    // width: 100%;
+    // height: 100%;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+}
+
+#wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	height:100%;
+} 
+
+#{headings()} {
+	font: $fontFamily-1;
+	color: $white;
+	font-weight: $bold;
+	font-size: 4em;
+}
+
+strong {
+	font-weight: $bold;
+}
+
+p {
+  	font-weight: $normal;
+  	padding-bottom: 0.625em;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.hideEle {
+	display: none;
+}
+
+.shoeEle {
+	display: block;
+}
+
+
+///////// Bootstrap
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+img {
+  border: 0;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.opaLightBlack {
+	background-color: rgba($black, .55);
+	@include transition(.3s);
+}
+
+.opaDarkBlack-bg {
+	background-color: rgba($black, .80) !important;
+	@include transition(.3s);
+}
+
+.opaDarkBlack40-bg {
+	background-color: rgba($black, .40) !important;
+	@include transition(.3s);
+}
+
+.alphaWhite {
+	background-color: rgba($white, .90);
+}
+
+.innerGlow {
+	@include innerGlow($blue);
+}
+
+// .navActive{
+// 	background-color: rgba($bloodRed, .5);
+// }
+
+.bgActive{
+	background-color: rgba($black, .4);
+}
+
+.block {
+	display: block;
+}
+
+.blue {
+	color: $blue;
+}
+
+.outterGlow {
+	@include outterGlow($white);
+}
+
+.imgOutterGlow {
+	@include imgOutterGlow($white);
+}
+
+
+
+/********************************/
+/* Spacecraft movements
+/********************************/
+
+.leftBottomUp {
+	@include transform(rotate(5deg));
+}
+
+.blueHighlight {
+	color: $blue;
+	@include outterGlow($white);
+
+}
+
+.white {
+  color: $white;
+}
+
+
+.whiteHighlight {
+  color: $white;
+  @include outterGlow($white);
+}
+
+.blink {
+	@include blink;
+}
+
+.borderHeaderTop{
+	border-top: solid 10px $blue;
+	@include breakpoint(max-width $small){
+		border-top: solid 7px $blue;
+	}
+	@include breakpoint(max-width $xsmall){
+		border-top: solid 5px $blue;
+	}
+}
+
+.borderNone{
+	border: none;
+}

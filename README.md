@@ -1,0 +1,2 @@
+# DannyRivera.me - custom single page design
+This project was created to demonstrate responsive single page page layout. The project uses Sass, Compass, Susy 2.0 and shows a variety of techniques including responsive, tween and parallax effects, etc.

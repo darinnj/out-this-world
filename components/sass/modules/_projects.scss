@@ -1,0 +1,774 @@
+ #projects { 
+    min-height: 100%;
+    min-width: 100%;
+
+    .mainContent {
+      //@include mainDefaultContainer();
+      padding: 0 4.5rem;
+      margin: auto;
+    } //mainContent
+
+    #portfolio-control {
+        margin: 0;
+        padding-bottom: 5rem;
+        @include breakpoint(max-width $medium){
+            padding-bottom: 1.5rem;
+        }
+        @include breakpoint(max-width $small){
+            padding-bottom: 1.5rem;
+        }
+        @include breakpoint(max-width $xsmall){
+            padding-bottom: 1.5rem;
+        }
+
+       div{
+            display: inline-block;
+            font-size: 1.6em;
+            color: darken($blue, 10);
+            margin-bottom: 10px;
+        }
+
+        .row {
+
+            div {
+                a {
+                    :hover{
+                            color: rgba($blue, .3);
+                        }
+                    i {
+                        color: rgba($blue, .8);
+                    } //i
+                } //a
+            } //div
+            .previous {
+                position: absolute;
+                left: .9rem;
+                top: 45%;
+                @include breakpoint(max-width $medium){
+                    left: .9rem;
+                    top: 45%;
+                } //breakpoint
+                @include breakpoint(max-width $small){
+                    left: .9rem;
+                    top: 45%;
+                } //breakpoint
+                @include breakpoint(max-width $xsmall){
+                    top: 93%;
+                } //breakpoint      
+
+            } //previous
+            
+            .next {
+                position: absolute;
+                right: .9rem;
+                top: 45%;
+                @include breakpoint(max-width $small){
+                  right: .3rem;
+                } // breakpoint
+                @include breakpoint(max-width $xsmall){
+                   top: 93%;
+                } //breakpoint
+            } //next 
+
+            .closer {
+                position: absolute;
+                right: 2em;
+                top: 1em;
+                @include breakpoint(max-width $medium){
+                    right: 1rem;
+                    top: .5rem;
+                } // breakpoint
+                @include breakpoint(max-width $small){
+                    top: .5rem;
+                } // breakpoint
+                @include breakpoint(max-width $xsmall){
+                    top: .4rem;
+                } //breakpoint
+            } //closer
+        } //row
+    } //portfolio
+
+    .single-portfolio {
+        //@include container('100%');
+        margin: auto;
+        .row{
+            @include span(10 of 12 at 1);
+            width: 100%;
+            margin: auto;
+            #primary {
+                width:55%;
+                padding: 2em;
+                display: inline-block;
+                margin: auto;
+                // position:absolute;
+                img {
+                    margin: auto;
+                    float: none;
+                } //img
+                @include breakpoint(max-width $medium){
+                    width:100%;
+                    display: block;
+                    float: none;
+                } //primary 
+            } //row
+
+
+            #secondary{
+                h3 { font-size: 3.1em; }
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 30px;
+                width: 40%;
+                // position: absolute;
+                p {
+                  font-size: 1.3em;
+                }
+                @include breakpoint(max-width $medium){
+                    @include span(10 of 12 at 1);
+                    display: block;
+                    margin: auto;
+                    width: 95%;
+
+                    .project-desc{
+                        h3, ul, p {
+                            margin-left: 20px;
+                        } //div
+                    } //project-desc
+                } //breakpoint
+
+                @include breakpoint(max-width $xsmall){
+                    h3 { font-size: 1.5em; }                  
+                } //breakpoint
+            } //secondary
+        } //row
+    } //single-portfolio
+} //projects
+
+
+
+
+/*****
+** Bootstrap starts here
+** normalize.css v3.0.2 | MIT License | git.io/normalize 
+*****/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.container:after,
+.row:after {
+  clear: both;
+}
+
+
+/******************************
+/* ##### GENERAL CLASS ##### *
+****************************/
+
+.mask {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100000;
+}
+#intro-loader {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  background: url("../img/preloader.gif");
+}
+.section-content{
+	padding: 20px 0 0px 0;
+}
+.section-title div {
+  width:80px;
+  height:80px;
+  margin:50px auto 0px auto;
+  background-color: #cccccc;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.section-title div span {
+  color: #ffffff;
+  margin-top: 27px;
+}
+.section-title h1 span{
+background-color: rgba(59, 63, 80, 0.6);
+border-radius: 6px;
+-webkit-border-radius: 6px;
+color:#fff;
+padding:0px 10px;
+}
+.section-title h1.white span{ 
+background-color: rgba(239,239,239,0.6);
+border-radius: 6px;
+-webkit-border-radius: 6px;
+color:#fff;
+padding:0px 10px;
+}
+.section-title h1 {
+  font-size: 46px;
+  letter-spacing: 2px;
+  margin: 20px auto 50px auto;
+  padding:0px 40px;
+  position: relative;
+  line-height: 1.6;
+}
+.section-title h1, .section-title h2, .section-title h3 {
+  text-transform: uppercase;
+  color: #666666;
+  font-weight: 700;
+  display: inline-block;                               
+}
+.section-title h1:before, .section-title h1:after {
+    background: none repeat scroll 0 0 #666666;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 35px;
+    width: 30px;
+}
+.section-title h1.white:before, .section-title h1.white:after {
+    background: none repeat scroll 0 0 #ffffff;
+}
+.section-title h1:after {
+    left: auto;
+    right: 0;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg3 {
+  background-color: #474D5D;
+}
+.white{
+color:#ffffff !important;
+}
+.uppercase{
+text-transform: uppercase;
+}
+.padBottom{
+padding-bottom: 15px;
+}
+.padTop{
+padding-top: 15px;
+}
+.killMargin{
+margin:0px;
+}
+.fa-ul i{
+font-size:12px;
+line-height: 1.6;
+}
+
+/* ##### EFFECT ##### */
+.item_top {
+  top: -30px;
+  opacity: 0;
+  position: relative;
+}
+.item_bottom {
+  bottom: -30px;
+  opacity: 0;
+  position: relative;
+}
+.item_left {
+  left: -60px;
+  opacity: 0;
+  position: relative;
+}
+.item_right {
+  right: -60px;
+  opacity: 0;
+  position: relative;
+}
+.item_fade_in {
+  opacity: 0;
+  position: relative;
+  padding-left: 0px;
+  right: 0px;
+}
+
+/*===================================================================================*/
+/*  PORTFOLIO                                                                            */
+/*===================================================================================*/
+
+#portfolio-wrap{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index: 5000;
+    display: none;
+    overflow: hidden;
+}
+
+#portfolio-page{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#portfolio-page #portfolio-content{
+    //vertical-align: middle;
+    display: table-cell;
+    background: rgba($black, .95);
+}
+
+/*===================================================================================*/
+/*  PROJECT DETAILS                                                                  */
+/*===================================================================================*/
+#portfolio-ajax {
+  h3 {
+    color: $white;
+  }
+  ul {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+}
+
+#portfolio-items img{
+    margin:0px !important;
+}
+.img img{
+    width: 100%;
+}
+.single-portfolio img{
+    width: 100%;
+}
+
+.project-desc .line-strong{
+margin-bottom:20px;
+}
+.project-desc .list-details{
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+    list-style: none;
+}
+.project-desc .list-details li{
+    padding: 10px 0;
+    border-bottom: 1px dashed $bloodRed;
+}
+
+
+.project-desc .list-details li i{
+    margin-right: 10px;
+}
+
+.project-desc p {
+  line-height: 1.5em;
+  font-size: $normal;
+}
+
+.slider_container{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  max-width:640px;
+  width:100%;
+}
+.slider_container .flex-direction-nav li{
+  list-style: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  right: -40px;
+  -webkit-transition: all ease .2s;
+  -moz-transition: all ease .2s;
+  -ms-transition: all ease .2s;
+  -o-transition: all ease .2s;
+  transition: all ease .2s;
+}
+.slider_container .flex-direction-nav li:first-child{
+  right: auto;
+  left: -40px;
+}
+.slider_container:hover .flex-direction-nav li {
+  right: 0;
+}
+.slider_container:hover .flex-direction-nav li:first-child {
+  left: 0;
+}
+.slider_container .flex-direction-nav a{
+  position: absolute;
+  width: 40px;
+  top: 0;
+  bottom: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.slider_container .flex-direction-nav a:after{
+  display: block;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 26px;
+  background: url(../img/slider_controls.png) 0 bottom no-repeat;
+  top: 50%;
+  margin-top: -13px;
+  left: 12px;
+}
+.slider_container .flex-direction-nav a.flex-next:after{
+  left: auto;
+  right: 12px;
+  background-position: right bottom;
+}
+.slider_container .flex-direction-nav a:hover{
+  background: transparent;
+}
+.slider_container .flex-direction-nav a:hover:after {
+  background-position: 0 0;
+}
+.slider_container .flex-direction-nav a.flex-next{
+  right: 0;
+  left: auto;
+}
+.slider_container .flex-direction-nav a.flex-next:hover:after {
+  background-position: right 0;
+}
+.slider_container ul.slides li {
+  list-style: none;
+  display: none;
+}
+.slider_container ul.slides{
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  padding:0;
+}
+.slider_container .flex-direction-nav {
+  margin: 0;
+}
+/*===================================================================================*/
+/*  PROJECT ITEMS                                                                    */
+/*===================================================================================*/
+
+.portfolio-items {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-items article {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    margin:0.5% 0.5% 0 0;
+}
+
+.portfolio-items article *
+{
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.portfolio-items article img
+{
+    width: 95%;
+    border: solid .5em rgba($black, 0.7);
+}
+
+.portfolio-items article:hover img
+{
+    -moz-transform: scale(1.2) rotate(6deg);
+    -ms-transform: scale(1.2 rotate(6deg));
+    -webkit-transform: scale(1.2) rotate(6deg);
+    transform: scale(1.2) rotate(6deg);
+}
+
+.portfolio-items article .overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    top:0;
+    left:0;
+    opacity: 0;
+    text-align: center;
+    padding: 50px 10px;
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+}
+
+.portfolio-items .item-info {
+    height: 100px;
+    margin-top: -50px;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 97%;
+}
+
+.portfolio-items article .overlay i{
+    font-size: 40px;
+}
+
+.portfolio-items article .overlay h3
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color:#fff;
+    line-height: 1.5em;
+}
+
+
+.portfolio-items article:hover .overlay
+{
+    opacity: 0.8;
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.portfolio-items article .overlay span
+{
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+
+/*===================================================================================*/
+/*  ISOTOPE                                                                          */
+/*===================================================================================*/
+
+.isotope-hidden.isotope-item{
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item{
+    z-index: 2;
+
+    -webkit-transition-duration: 0.6s;
+       -moz-transition-duration: 0.6s;
+        -ms-transition-duration: 0.6s;
+         -o-transition-duration: 0.6s;
+            transition-duration: 0.6s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+       -moz-transition-property: height, width;
+        -ms-transition-property: height, width;
+         -o-transition-property: height, width;
+            transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+       -moz-transition-property: -moz-transform, opacity;
+        -ms-transition-property: top, left, opacity;
+         -o-transition-property: top, left, opacity;
+            transition-property: transform, opacity;
+}
+
+/******************************************
+/* Responsive ExtraSmall devices (tablets, 767px and down) 
+********************************************/
+@include breakpoint(max-width $medium){
+
+    .portfolio-items article {
+        width: 49.4%;
+    }       
+
+    .section-title h1 {
+      font-size: 45px;
+    }
+
+    #ajaxpage .section-title h1 {
+      font-size: 40px;
+    }
+    .project-media, .project-description {
+      margin: 40px 0 0 0;
+      text-align: center;
+    }
+} //breakpoint
+
+@media (max-width: 560px) {
+    .header .heading {
+    font-size: 26px;
+    letter-spacing: 0px;
+    }
+    .header .box-heading{
+    font-size:50px;
+    }
+    .portfolio-items article {
+        width: 100%;
+        margin:0px 0px 5px 0px;
+    }
+    .section-title h1:before, .section-title h1:after {
+        background: none;
+    }
+    .section-title h1.white:before, .section-title h1.white:after {
+        background: none;
+    }
+}
+
+
+@include breakpoint(min-width $small){
+    .project-description {
+      text-align: center;
+    }
+
+    .portfolio-items article {
+        width: 49.4%;
+    }
+
+    @include breakpoint(min-width $medium){
+        .project-description {
+            text-align: inherit;
+        }
+        .portfolio-items article {
+            width: 32.5%;
+        }
+
+    } //breakpoint
+
+    @include breakpoint(min-width $wide){
+        .portfolio-items article {
+            width: 24.4%;
+        }
+    } //breakpoint
+} //breakpoint

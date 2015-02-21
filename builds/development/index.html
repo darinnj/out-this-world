@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danny Rivera - Front-end Web Developer</title>
+    <link rel="stylesheet" href="images/icons/foundation/foundation-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-59949533-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div id="intro-loader"></div>
+    </div>
+    
+    <main role="main" id="wrapper"> 
+        <!-- 
+        //spacecraft    
+        -->
+        <div id="spaceCraft-1"></div>
+        <a href="#about"><div id="spaceCraft-2"><i class="fa fa-angle-down"></i></div></a>
+        <a href="#wrapper"><div id="spaceCraft-3"><i class="fa fa-angle-up"></i></div> </a>
+        
+        <!-- 
+        // Navigation 
+        -->
+        <nav id="navWrapper" class="borderHeaderTop">
+            <div class="navbar">
+                <div class="brand">                
+                    <h1><a href="#welcome"><span class="nameBrand">Danny Rivera</span><span class="me">.ME</span></a></h1>
+                </div>
+                <div class="navController">
+                    <a href="#">
+                        <i class="fa fa-th-list fa-lg"></i>
+                    </a>
+                </div>
+                <ul>
+                    <li class="linkLi1">
+                        <a href="#about">
+                            <i class="fi fi-torso-business"></i> &nbsp;
+                            <span>ABOUT</span>
+                        </a>
+                    </li>
+                    <li class="linkLi2">
+                        <a href="#projects">
+                            <i class="fa fa-th fa-lg"></i>
+                            <span>PROJECTS</span> &nbsp;
+                        </a>
+                    </li>
+                    <li class="linkLi3">
+                        <a href="#contact">
+                            <i class="fa fa-wifi fa-lg"></i>
+                            <span>CONTACT</span> &nbsp;
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 
+        // Welcome scene 
+        -->
+        <span class="welcomeTop"></span>
+        <div class="particles">
+            <canvas id="canvas"> Sorry, your browser cannot support canvas tag. </canvas>
+        </div>
+        <header id="welcome" class="scene fullheight">
+            
+            <div class="particles"></div>
+            <div id="welcomeMsg">
+                <div class="content">
+                    <div class="first">OUT</div>
+                    <div class="row">
+                        <div class="second">
+                            <div class="top">OF THIS</div>
+                            <div class="bottom">WORLD</div>
+                        </div>
+                    <div class="third">!</div>
+                    </div>
+                </div>
+                <span>
+                    <h1 class="mainMsgBottom">FRONT-END&nbsp;WEB&nbsp;DEVELOPER</h1>
+                </span>
+            </div>
+            <!-- <div id="earth"></div>
+            <div class="moon"></div> -->
+        </header><!-- #welcome -->
+
+        <!-- 
+        // About scene 
+        -->
+        <span class="aboutTop"></span>
+        <div id="about" class="scene fullheight">
+            <section class="sceneHeader">
+                <h1 class="sceneTitle">ABOUT<i class="fi-torso-business"></i></h1>
+            </section><!-- topHeader -->
+            
+            <!-- Main content-->
+            <div class="mainContent">
+                <div class="row1">
+                    <article id="competencies">
+                        <section class="content">
+                            <h2>COMPETENCIES</h2>
+                            <ul class="skillBar">
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="95"><strong>Web Development</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="85"><strong>Web Design</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="70"><strong>SEO Analysis</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="70"><strong>E- Marketing</strong></span>
+                                </div>
+                                </li>
+                            </ul>
+                            <!-- End Skill Section -->  
+                        </section>
+                    </article><!-- #competencies -->
+
+                    <article id="skills">
+                        <section class="content">
+                            <h2>SKILLS</h2>
+                            <ul class="skillBar">
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="95"><strong>HTML / CSS / SASS</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="90"><strong>JavaScript</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="80"><strong>Drupal</strong></span>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="skillBg">
+                                    <span data-width="65"><strong>LAMP</strong></span>
+                                </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </article><!-- #skills -->
+                </div><!-- row -->
+                
+                <div class="row2">
+                    <article id="experience">
+                        <section class="content">
+                            <h2>EXPERIENCE</h2>
+                            <div id="timeline">
+                                <div id="dates">
+                                     <ul class="list-inline">
+                                        <li><span>1996</span></li>
+                                        <li><span>2001</span></li>
+                                        <li><span>2003</span></li>
+                                        <li><span>2010</span></li>
+                                        <li><span>2015</span></li>
+                                    </ul>
+                                </div><!-- date -->
+                                <div id="timelinePoints">
+                                   <ul class="list-inline">
+                                       <li><span><i class="fa fa-caret-up"></i></span></li>
+                                       <li><span><i class="fa fa-caret-up"></i></span></li>
+                                       <li><span><i class="fa fa-caret-up"></i></span></li>
+                                       <li><span><i class="fa fa-caret-up"></i></span></li>
+                                       <li><span><i class="fa fa-caret-up"></i></span></li>
+                                   </ul>
+                                </div><!-- timelinePoints -->
+                                <hr>
+                                 <div id="job">
+                                    <ul class="list-inline">
+                                        <li><span><strong>US Marine Corps.</strong><br><span class="blue">Lance&nbsp;Corporal</span></span></li>
+                                        <li><span><strong>PowerOne Media</strong><br><span class="blue">Web Producer</span></span></li>
+                                        <li><span><strong>BonaFide Realty</strong><br><span class="blue">Web Master</span></span></li>
+                                        <li><span><strong>Flight Centre US</strong><br><span class="blue">Sr. Web Developer</span></span></li>
+                                        <li><span><strong>webbuzz strategies</strong><br><span class="blue">Freelance</span></span></li>
+                                    </ul>
+                                </div><!-- job -->
+                            </div><!-- timeline -->
+                            <div class="clearfix"></div>
+                            <div id="experienceTerminal">
+                               <ul class="blurb">
+                                    <li><span>Enlisted a few months after finishing high school. Learned life skills, time and self-management.</span></li>
+                                    <li><span>Began my web development career with PowerOne Media, an online start-up during the dot.com boom.</span></li>
+                                    <li><span>Gained overall business experience developing online real estate services and products.</span></li>
+                                    <li><span>Currently the technical/team lead (hands-on) for an enterprise travel company overseeing a small team of web developers.</span></li>
+                                    <li><span>In my spare, time I enjoy freelancing my online skills to small businesses.</span></li>
+                                </ul>
+                            </div>
+                            <button class="resumeBtn">DOWNLOAD RESUME &nbsp;<i class="fa fa-file-word-o"></i></button>
+                        </section><!-- content-->
+
+                    </article><!-- experience -->
+                     <div class="mobileResumeButton">
+                        <button class="resumeBtn">DOWNLOAD RESUME &nbsp;<i class="fa fa-file-word-o"></i></button>
+                    </div> <!-- mobileResumeButton-->
+                </div><!-- row -->
+            </div><!-- mainContent -->
+        </div><!-- about -->
+
+        <!-- 
+        // Project scene 
+        -->
+        <span class="projectsTop"></span>
+        <div id="projects" class="scene">
+            <section class="sceneHeader">
+                <h1 class="sceneTitle">PROJECTS<i class="fa fa-th"></i></h1>
+            </section>
+            <div class="mainContent">
+                <!-- Portfolio Section -->
+                <section id="portfolio" class="section-content">
+            <!--     <div class="container"> -->
+                <div id="portfolio-wrap" tabindex="1">
+                    <div id="portfolio-page">
+                        <div id="portfolio-content">
+                              <div class="container">
+                        <div class="row">
+                                <div id="portfolio-control">
+                                    <div class="row">
+                                        <div class="previous">
+                                            <a href="#" id="prev-project" title="Previous Project"><i class="fa fa-chevron-circle-left"></i></a>
+                                        </div>
+                                        <div class="closer">
+                                            <a href="#" id="close-project" title="Close Project"><i class="fa fa-times"></i></a>
+                                        </div>
+                                        <div class="next">
+                                            <a href="#" id="next-project" title="Next Project"><i class="fa fa-chevron-circle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End #portfolio-control -->
+                                <!-- Ajax will load into here -->
+                                <div id="portfolio-ajax">
+                                </div>
+                                <!-- End #portfolio-ajax -->
+                                <!-- End Ajax -->
+                      </div>
+                      </div>  
+                        </div>
+                        <!-- End #portfolio-content -->
+                    </div>
+                    <!-- End #portfolio-page -->
+                </div>
+                <div class="container">
+                    <div id="portfolio-items" class="portfolio-items item_fade_in">
+                         <article class="design photo">
+                            <a href="#!projects/liberty-travel.html">
+                            <img src="images/projects/thumbnail/liberty-travel.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>Liberty Travel</h3>
+                                    <span>Lead Sr. Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="photo web video">
+                            <a href="#!projects/flight-center.html">
+                            <img src="images/projects/thumbnail/flight-center.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-film"></i> -->
+                                    <h3>Flight Centre USA</h3>
+                                    <span>Lead Sr. Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="video design mobile">
+                            <a href="#!projects/discount-cruises.html">
+                            <img src="images/projects/thumbnail/discount-cruises.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>DiscountCruises.com</h3>
+                                    <span>Lead Sr. Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="web photo">
+                            <a href="#!projects/nj-modern.html">
+                            <img src="images/projects/thumbnail/nj-modern.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-picture-o"></i> -->
+                                    <h3>NJ Modern</h3>
+                                    <span>Web Consultant</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="mobile video">
+                            <a href="#!projects/hot-caribbean-deals.html">
+                            <img src="images/projects/thumbnail/hot-caribbean-deals.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-film"></i> -->
+                                    <h3>HotCaribbeanDeals.com</h3>
+                                    <span>Lead Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="photo video">
+                            <a href="#!projects/bonafide-realty.html">
+                            <img src="images/projects/thumbnail/bonafide-realty.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-picture-o"></i> -->
+                                    <h3>BonaFide Realty</h3>
+                                    <span>Owner Operator / Web Master</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                            </article>
+                        <article class="web mobile video">
+                            <a href="#!projects/worldwide-traveler.html">
+                            <img src="images/projects/thumbnail/worldwide-traveler.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>WorldwideTraveler.com</h3>
+                                    <span>Lead Sr. Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                            </article>
+                        <article class="video photo web design">
+                            <a href="#!projects/gogowwv.html">
+                            <img src="images/projects/thumbnail/gogowwv.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>GOGO Vacations</h3>
+                                    <span>Lead Sr. Web Developer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="design photo">
+                            <a href="#!projects/stone-gallery.html">
+                            <img src="images/projects/thumbnail/stone-gallery.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>Stone Gallery</h3>
+                                    <span>Web Consultant</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                            </article>
+                        <article class="web photo">
+                            <a href="#!projects/isecuret.html">
+                            <img src="images/projects/thumbnail/isecuret.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-picture-o"></i> -->
+                                    <h3>iSecureT</h3>
+                                    <span>Web Consultant</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="video design mobile">
+                            <a href="#!projects/abracat.html">
+                            <img src="images/projects/thumbnail/abracat.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-camera"></i> -->
+                                    <h3>Abracat.com</h3>
+                                    <span>Web Producer</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                        <article class="photo web video">
+                            <a href="#!projects/gogreen-remedy.html">
+                            <img src="images/projects/thumbnail/gogreen-remedy.png" alt="image"/>
+                            <div class="overlay">
+                                <div class="item-info">
+                                    <!-- <i class="fa fa-film"></i> -->
+                                    <h3>GoGreenRemedy.com</h3>
+                                    <span>Owner Operator</span>
+                                </div>
+                            </div>
+                            <!-- End .overlay -->
+                            </a>
+                        </article>
+                    </div><!-- End #portfolio-items.portfolio-items -->
+                </div> <!-- container -->
+                </section>
+                <!-- End Portfolio Section -->
+            </div><!-- .mainContent -->
+        </div><!-- #projects -->
+
+        <!-- 
+        // Contact scene 
+        -->
+        <span class="contactTop"></span>
+        <div id="contact" class="scene fullheight">
+            <section class="sceneHeader">
+                <h1 class="sceneTitle">CONTACT<i class="fa fa-wifi"></i></h1>
+            </section>
+            <div class="mainContentContact">
+                <div id="formContent">
+                    <div class="formHeader">
+                        I'm always looking for opportunities to work with talented people. If you have a project you'd like to collaborate on, an amazing job offer or just want to say "Hi" - by all means please go ahead and drop me a line.
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-respond"></div>
+                    <form method="post" name="contactform" id="contactform" class="validate" role="form">
+                        <input type="text" name="name" id="name" min-length="2" placeholder="NAME:">
+                        <input type="text" name="email" id="email" placeholder="EMAIL:">
+                        <textarea name="message" id="message" cols="30" rows="5" class="message" placeholder="MESSAGE:" required></textarea>
+                        <button id="contactFormSubmit">SEND MESSAGE &nbsp;<i class="fa fa-send-o"></i></button>
+                    </form>
+                </div> <!-- formContent -->
+                <div class="clearfix"></div>
+                <div id="googleMap"></div>
+                <div class="clearfix"></div>
+            </div><!-- .mainContent-->
+        </div><!-- #contact -->
+
+        <footer>
+            <p>Developed w/ GULP, HTML5, CSS3, SASS, &amp; JQUERY.
+            <br>
+            Fork this project on <a href="https://github.com/darinnj" target="_blank"><span class="blue">GitHub:</span> <span class="fa fa-github-square blue"></span></a></p>
+            <div>
+                <span class="copyRight">&copy;2015 Designed &amp; developed by: <a href="http://www.linkedin.com/in/darivera/" target="_blank"><span class="blue">Danny Rivera</span></span> <span class="fa fa-linkedin-square blue"></span></a> 
+            </div>          
+        </footer>
+       <!--  <i class="fa fa-crosshairs"><i/> -->
+    </main>
+    
+    <div id="backTop"><i class="fa fa-angle-up"></i></div>
+
+    <script src="js/script.js"></script>    
+</body>
+</html>

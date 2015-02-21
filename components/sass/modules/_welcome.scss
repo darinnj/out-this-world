@@ -1,0 +1,148 @@
+$welcomeWidth : 575px;
+
+#welcome {
+	width: 100%;
+	position: relative;
+
+	#welcomeMsg {
+		@include center('x');
+		top: 25%;
+		visibility: hidden;
+		span {
+			.mainMsgBottom {
+				visibility: hidden;
+			}
+		}
+		div.content {
+			@include center('x');
+			min-width: $welcomeWidth;
+			min-height: 145px;
+			@include breakpoint(max-width $small){
+				min-width: 445px;
+			}
+			@include breakpoint(max-width $xsmall){
+				min-width: 340px;
+			}
+
+			.first {
+				font-family: $fontFamily-3;
+				font-size: 11em;
+				display: inline-block;
+				float: left;
+				@include breakpoint(max-width $small){
+					font-size: 9em;				
+				} //break
+				@include breakpoint(max-width $xsmall){
+					margin: auto;
+					display: block;
+					font-size: 8em;
+					float: none;
+					text-align: center;
+				} //break
+			} //first
+			@include breakpoint(max-width $xsmall){
+				.row{
+					min-width: 240px;
+					height: 100px;
+					@include center('x');
+					top: 6.5em;
+					left: 16em;
+				}
+			}
+			
+			.second {
+				text-align: center;
+				margin: 1em 0 0 .5em;
+				display: inline-block;
+				float: left;
+				@include breakpoint(max-width $xsmall){
+					margin: auto;
+					display: inline-block;
+					float: none;
+					text-align: center;
+
+				} //break
+
+				.top {
+					font-size: 4.1em;
+					font-family: $fontFamily-2;
+					letter-spacing: .1em;
+					@include breakpoint(max-width $small){
+						font-size: 3em;				
+					} //break
+					@include breakpoint(max-width $xsmall){
+						font-size: 3.4em;
+					} //break
+
+				} //top
+				.bottom {
+					font-family: $fontFamily-3;
+					font-size: 4.6em;
+					@include breakpoint(max-width $small){
+						font-size: 3.5em;				
+					} //break
+					@include breakpoint(max-width $xsmall){
+						font-size: 3.8em;
+					} //break
+				} //bottom
+			} //second
+
+			.third {
+				font-size: 10em;
+				font-family: $fontFamily-2;
+				font-weight: normal;
+				margin-left: 0px;
+				display: inline-block;
+				float: left;
+				@include breakpoint(max-width $small){
+					float: none;
+					font-size: 8em;
+					position: relative;
+					right: 10px;
+				}
+
+			} //third
+		} //div.content
+		span {
+			width: $welcomeWidth;
+			display: block;
+			text-align: center;
+			margin-top: 122px;
+			@include breakpoint(max-width $small){
+				width: 450px;
+			}
+			@include breakpoint(max-width $xsmall){
+				width: 335px;
+				margin: 0;
+				display: block;
+				position: relative;
+				top: 14.7em;
+			} //break
+			h1 {
+				font-family: $fontFamily-2;
+				font-size: 3.0em;
+				font-weight: normal;
+				color: $blue;
+				@include breakpoint(max-width $small){
+						font-size: 2.3em;				
+					} //break
+				@include breakpoint(max-width $xsmall){
+					font-family: $fontFamily-1;
+					font-size: 2.5em;
+				}
+			} //h1
+		} //span
+		
+	} //welcomeMsg
+} //welcome
+
+
+.particles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+

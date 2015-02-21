@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Russo+One|Economica:400,700);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css);
+
+@include border-box-sizing; //uses border box sizing like the old IE
+
+//Susy Global Settings
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: .25,
+  gutter-position: inside
+);
+
+//Add Color Palette
+$gray-1     	: #2e2e2e;
+$gray-2     	: #686868;
+$gray-3     	: #9a9a9a;
+$blue       	: #30a6de;
+$green			  : #30de3c;
+$white      	: #ffffff;
+$black       	: #000000;
+$bloodRed		  : #b00000;
+
+$typeLight    	: $white;
+$typeDark		    : darken($white, 20);
+$navLink		    : darken($blue, 25);
+$navLinkHover	  : $blue;
+$navHeight		  : 70px;
+
+//Font variables
+$fontFamily-1   : 'Economica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontFamily-2	  : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontFamily-3   : 'Russo One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+$normal   		: 400;
+$bold     		: 700;
+
+$sceneTitle		: $bold 2.5rem $fontFamily-1;
+$normalFont		: 0.5rem $fontFamily-2;
+$fontIconLg		: 1.5em;
+
+//Breakpoint variables
+$narrow : 490px;
+$xsmall	: 640px;
+$small	: 768px;
+$medium	: 990px;
+$wide	: 1200px;
+
+$xsHeight: 10px;
+
+$b		: solid 1px #00ff00;

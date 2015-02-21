@@ -1,0 +1,207 @@
+nav {
+	//border: $b;
+	max-height: $navHeight;
+	width: 100%;
+	display: block;
+	background: rgba($black, .7);
+	position: fixed;
+	z-index: 20;
+	@include breakpoint(max-width $small){
+		max-height: $navHeight - 10px;
+	} //breakpoint
+	@include breakpoint(max-width $xsmall){
+		max-height: $navHeight - 25px;
+	} //breakpoint
+
+	.navbar {
+		@include container; //center my content within 1200px
+		padding: 0 15px;
+		height: $navHeight;
+		@include breakpoint(max-width $small){
+			height: $navHeight - 10px;
+		} //breakpoint
+		.brand {
+			h1 {
+				@include center('y');
+				visibility: hidden;
+				font-family: $fontFamily-1;
+				font-size: 3.1em;
+				font-weight: $normal;
+				a {
+					color: $white;
+					text-decoration: none;
+				} //a
+				.me {
+					visibility: hidden;
+					font-size: .7em;
+				}
+				@include breakpoint(max-width $xsmall){
+					font-size: 2.2em;
+					top: .8em;
+				} //breakpoint
+			}  //h1
+		} //brand
+		.navController {
+			display: none;
+			border: none;
+			text-align: center;
+			width: 100px;
+			margin-top: 15px;
+			position: absolute;
+			right: 0;
+			@include breakpoint(max-width $xsmall){
+				display: block;
+			}
+			a{
+				color: $blue;
+				:hover{
+					color: darken($blue, 20);
+				}
+			}
+		} //linkLi0
+		
+		ul {
+			display: inline-block;
+			position: relative;
+			display: none;
+			float: right;
+			:hover {
+				color: darken($blue, 20);
+				background-color: rgba($black, 1);
+				//border-top: 1px solid $blue;
+				@include breakpoint(max-width $xsmall) {
+					//border-top: 1px solid darken($blue, 30);
+					border-bottom: 1px solid darken($blue, 30);
+				} //hover
+				
+			} //ul
+			@include breakpoint(max-width $xsmall){
+				position: absolute;
+				right: -105px;
+				top: $navHeight - 24px;
+
+			} //breakpoint
+
+			.linkLi1{
+				a {
+					span {
+						position: relative;
+						bottom: 6px;
+						@include breakpoint(max-width $small){
+							bottom: 3px;
+						}
+					} //span
+				} //a
+			} //linkLi1
+
+			li {
+				height: $navHeight - 3px;
+				vertical-align: top;
+				display: inline-block;
+				min-width: 55px;
+				padding: 0 .5em;
+				float: left;
+				text-align: center;
+				background: rgba($black, .5);
+				:hover { 
+					background: rgba($white, 0); 
+					border: none;
+				} //hover
+				@include breakpoint(max-width $small){
+					height: $navHeight - 13px;
+				} //breakpoint
+				@include breakpoint(max-width $xsmall){
+					background: rgba($black, .8);
+					//display: block;
+					clear: both;
+					height: $navHeight - 28px;
+					width: 100px;
+					text-align: left;
+					//display: none;					
+				}				
+				
+				a {					
+					height: $navHeight;
+					color: $blue;
+					text-decoration: none;
+					display: block;
+					:hover{ 
+							border: none;
+							text-decoration: none;
+						} //hover
+					@include breakpoint(max-width $xsmall){
+						height: $navHeight - 26;
+					} //breakpoint
+					
+					.fa {
+						position: relative;
+						right: 2px;
+					}
+
+					.fi {
+						position: relative;
+						left: 2px;
+					}
+
+					i {
+						font-size: $fontIconLg;
+						display: block;
+						padding: 21px 0 5px 0;
+						@include breakpoint(max-width $xsmall){
+							display: inline-block;
+							padding-top: 17px !important;
+						} //breakpoint
+					}
+
+					.fi-torso-business {
+						padding-top: 13px !important;
+						font-size: 1.9em;
+						@include breakpoint(max-width $xsmall){
+							padding-top: 10px !important;
+						}
+					}
+
+					span {					
+						font-size: .6em;
+						//display: none;
+						position: relative;
+						bottom: 4px;
+						@include breakpoint(max-width $xsmall){
+							display: inline-block;
+							font-size: 1em !important;
+							bottom: 0px;
+						}
+					} //span
+
+				} //a
+				
+			} //li
+
+			.active{
+				background-color: rgba($gray-1, .6);
+				color: darken($blue, 30);
+				border-top: none;
+				:hover{
+					color: darken($blue, 30);
+				}
+				a { 
+					display: inline-block;
+					color: darken($blue, 30);
+					i {
+						@include outterGlow(black); 
+						color: darken($blue, 30);
+					} //i
+					span {
+						@include outterGlow(black); 
+						display: inline-block;
+						font-size: .6em;	
+					} //span
+				} //a
+			} //active
+		} //ul
+	} //navbar
+} //nav
+
+.fa-th-list {
+	font-size: 1.7em;
+}
